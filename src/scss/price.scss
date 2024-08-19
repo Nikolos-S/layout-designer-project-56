@@ -1,0 +1,91 @@
+.price {
+  text-align: center;
+
+  .pt-100 {
+    @include padding($top: 100px);
+  }
+
+  .my-40 {
+    @include margin($top: 48px, $bottom: 40px);
+  }
+
+  .items {
+    gap: 50px;
+    transition: opacity 0.45s ease;
+    visibility: hidden;
+
+    &:hover > :not(:hover) {
+      opacity: 0.5;
+    }
+
+    .pricing-item {
+      flex: 1 1 366px;
+      max-width: 400px;
+      
+      @include padding($right: 1.5rem, $left: 1.5rem);
+      border-radius: 1rem;
+      transition: 0.60s;
+      visibility: visible;
+
+      h3 {
+        @include margin($top: 24px, $bottom: 200px)
+      }
+
+      .pricing-value {
+        font-size: 64px;
+        line-height: 1em;
+
+        sup {
+          font-size: 32px;
+          line-height: 1em;
+        }
+      }
+
+      button {
+        width: 100%;
+        border: solid 1px #fff;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 24px;
+
+        @include padding($top: 20px, $right: 30px, $bottom: 20px, $left:30px);
+      }
+
+      .pricing-footer {
+        @include text-small;
+        @include margin($top: 64px, $bottom: 64px);
+      }
+
+      &.bg-one {
+        @include bg-image;
+        background-image: url("../images/subscribe_1.png");
+      }
+
+      &.bg-two {
+        @include bg-image;
+        background-image: url("../images/subscribe_2.png");
+      }
+
+      &.bg-three {
+        @include bg-image;
+        background-image: url("../images/subscribe_3.png");
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .price {
+    .items {
+      .pricing-item {
+        h3 {
+          @include margin($top: 16px, $bottom: 200px)
+        }
+      }
+    }
+  }
+}

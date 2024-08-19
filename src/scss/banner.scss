@@ -1,0 +1,67 @@
+.bg-banner {
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.banner {
+  text-align: center;
+
+  .my-200 {
+    @include margin($top: 200px, $bottom: 200px);
+  }
+  
+  .mt-31 {
+    @include margin($top: 31px);
+  }
+  
+  .form {
+    max-width: 570px;
+
+    @include gap ($ver: 24px, $hor: 24px);
+
+    .input {
+      flex: 1 1 270px;
+      min-height: 50px;
+
+      @include padding($left: 20px);
+
+      border: solid 2px $white-400;
+      border-radius: 3px;
+      font-size: 14px;
+      background-color: transparent;
+
+      &::placeholder {
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+
+    .banner-button {
+      border: none;
+      font-size: 13.3px;
+      background: $green;
+    }
+
+    .position {
+       flex: 1 1 570px;
+    }
+
+    .white {
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .banner {
+    .my-200 {
+      @include margin($top: 248px, $bottom: 200px);
+    }
+    
+    .mt-31 {
+      @include margin($top: 16px);
+    }
+  }
+}

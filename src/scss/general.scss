@@ -1,0 +1,219 @@
+@font-face {
+    font-weight: bold;
+    font-family: "Roboto Bold";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+  
+@font-face {
+    font-weight: normal;
+    font-family: "Roboto Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@mixin regular {
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+@mixin bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    @include regular;
+  }
+  
+  a {
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  h1,
+  h2 {
+    font-family: "Roboto Bold", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 60px;
+    line-height: 90px;
+  }
+
+  h2 {
+    font-size: 38px;
+    line-height: 57px;
+  }
+
+  h3 {
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  @mixin text-small {
+    font-size: 12.8px;
+    line-height: 19.2px;
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .default-bg {
+    background-color: $black-800;
+  }
+
+  .w-100 {
+    width: 100%
+  }
+
+  .d-flex {
+    display: flex;
+    align-items: center;
+
+    &.justify-between {
+        justify-content: space-between;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.direction-column {
+        flex-direction: column;
+    }
+
+    &.direction-row {
+      flex-direction: row;
+    }
+  }
+
+  @mixin gap($ver: 0, $hor: 0) {
+    gap: $ver $hor;
+  }
+
+  @mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top {
+      margin-top: $top;
+    }
+
+    @if $right {
+      margin-right: $right;
+    }
+
+    @if $bottom {
+      margin-bottom: $bottom;
+    }
+
+    @if $left {
+      margin-left: $left;
+    }
+  }
+
+  @mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+    @if $top {
+      padding-top: $top;
+    }
+
+    @if $right {
+      padding-right: $right;
+    }
+
+    @if $bottom {
+      padding-bottom: $bottom;
+    }
+
+    @if $left {
+      padding-left: $left;
+    }
+  }
+
+  @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+
+    @if $top {
+      top: $top;
+    }
+
+    @if $right {
+      right: $right;
+    }
+
+    @if $bottom {
+      bottom: $bottom;
+    }
+
+    @if $left {
+      left: $left;
+    }
+  }
+
+  .button {
+    @include padding($top: 21px, $right: 30px, $bottom: 21px, $left:30px);
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  @media (max-width: 800px) {
+    h1 {
+        font-size: 30px;
+        line-height: 45px;
+      }
+    
+    h2 {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+    h3 {
+      font-weight: bold;
+      font-size:16px;
+      line-height: 24px;
+    }
+  }

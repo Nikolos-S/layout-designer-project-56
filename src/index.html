@@ -4,19 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Портал «Music Box»</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>layout-designer-project-56/nikolos-s</title>
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <header>
+  <header class="header">
+    <div class="container">
+      <div class="d-flex wrap justify-between">
+        <div class="logo-name d-flex">
+          <a href="#" class="logo-content">
+            <img src="./images/logo.svg" alt="логотип" class="logo">
+          </a>
+          <p class="name text-uppercase">Music Box</p>
+        </div>
+        <nav class="menu">
+          <ul class="d-flex text-uppercase gap wrap">
+            <li class="item"><a href="#">главная</a></li>
+            <li class="item"><a href="#">каталог</a></li>
+            <li class="item"><a href="./artist.html">исполнители</a></li>
+            <li class="item"><a href="#">контакты</a></li>
+          </ul>
+        </nav>
+        <form class="search">
+          <input type="text" placeholder="поиск...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <section id="page-description" class="bg-banner">
+    <div class="container banner">
+      <div class="my-200 d-flex direction-column">
+          <h1>Онлайн музыка где угодно</h1>
+          <h2>без ограничений</h2>
+          <p class="mt-31">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</p>
+        <form class=" form d-flex wrap justify-between">
+          <input class="input white" placeholder="Имя" type="text">
+          <input class="input white" placeholder="Email" type="email">
+          <button class="button position text-uppercase banner-button white" type="submit">получить доступ</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    </header>
+  <main>
+    <section id="page-pricing" class="default-bg">
+      <div class="container price">
+        <div class="pt-100">
+          <h2>Формы подписки</h2>
+          <div class="items d-flex wrap justify-center my-40">
 
-    <main>
- 
-    </main>
-    <footer>
+            <div class="pricing-item bg-one">
+              <h3>бесплатная</h3>
+              <p class="pricing-value text-uppercase my-40">0 <sup>руб.</sup></p>
+              <button class="button">
+                <a href="#">Оформить</a>
+              </button>
+              <p class="pricing-footer">Оплата в месяц. Бесплатный тариф предоставляет доступ ко всей коллекции музыки. Присутствует реклама</p>
+            </div>
+
+            <div class="pricing-item bg-two">
+              <h3>стандартная</h3>
+              <p class="pricing-value text-uppercase my-40">250 <sup>руб.</sup></p>
+              <button class="button">
+                <a href="#">Оформить</a>
+              </button>
+              <p class="pricing-footer">Оплата в месяц. Стандартный тариф предоставляет доступ ко всей коллекции музыки в среднем качестве</p>
+            </div>
+
+            <div class="pricing-item bg-three">
+              <h3>премиум</h3>
+              <p class="pricing-value text-uppercase my-40">500 <sup>руб.</sup></p>
+              <button class="button">
+                <a href="#">Оформить</a>
+              </button>
+              <p class="pricing-footer">Оплата в месяц. Премиум тариф предоставляет доступ ко всей коллекции музыки в высоком качестве</p>
+            </div>
+
+          </div>
+          <p>На всех тарифах возможно прослушивание музыки с мобильных устройств. На премиум тарифе вы можете скачать все композиции на ваше устройство и слушать музыку без подключения к интернету</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
       
-    </footer>
+  </footer>
 </body>
 </html>
